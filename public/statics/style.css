@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+button, .a-button, input[type="radio"]+label {
+    background-color: var(--col-sub-alt);
+    padding: 12px;
+    color: var(--col-text);
+    border-radius: 8px;
+    transition: all 0.2s;
+    border: none;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    text-decoration: none;
+}
+
+input[type="radio"]:checked+label, .checked {
+    background-color: var(--col-main);
+    color: var(--col-bg);
+  }
+
+button:hover, .a-button:hover, input[type="radio"]+label:hover {
+    color: var(--col-sub-alt);
+    background-color: var(--col-text);
+}
+
+button:active, .a-button:active, input[type="radio"]+label:active {
+    color: var(--col-bg);
+    background-color: var(--col-sub);
+}
+
+input[type="radio"][disabled]+label, .disabled {
+    opacity: .33;
+    pointer-events: none;
+}
+
+input, textarea {
+    background-color: var(--col-sub-alt);
+    padding: 8px 8px;
+    color: var(--col-text);
+    border-radius: 8px;
+    border: none;
+	font: inherit;
+	outline: inherit;
+}
+
+input:disabled {
+    opacity: .33;
+}
+
+
+input[type="radio"] {
+  display: none;
+}
+
+select {
+    background-color: var(--col-sub-alt);
+    padding: 8px 8px;
+    color: var(--col-text);
+    border-radius: 8px;
+    border: none;
+	font: inherit;
+	outline: inherit;
+}
+
+a {
+    color: var(--col-sub);
+    text-decoration: underline;
+}
+
+a:hover {
+    color: var(--col-text);
+}
+
+body {
+    font-family: "Lexend Deca", "Roboto Mono", Vazirmatn, monospace;
+    margin: 0;
+    background-color: var(--col-bg);
+    color: var(--col-text)
+}
+
+#navbar {
+    position: sticky;
+    top: 0;
+    height:50px;
+    background-color: var(--col-bg);
+    border-bottom: 1px solid var(--col-sub-alt);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+#navbar a {
+    text-decoration: none;
+}
+
+#navbar span {
+    cursor: pointer;
+    margin: 12px;
+}
+
+.nodisplay {
+    display: none;
+}
+
+.dropdown-content {
+    position: absolute;
+    background-color: var(--col-bg);
+    top: 50px;
+    right: 0;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 8px 8px;
+}
+
+.login-identity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 0;
+}
+
+.login-identity label {
+    margin-right: 8px;
+}
+
+.menu-item {
+    margin: 8px;
+    box-sizing: border-box;
+}
+
+.menu-item a {
+    display: block;
+    text-align: center;
+    color: inherit;
+    cursor: pointer;
+    width: 100%;
+    background-color: var(--col-sub-alt);
+    padding: 12px;
+    color: var(--col-text);
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.menu-item a:hover {
+    color: var(--col-sub-alt);
+    background-color: var(--col-text);
+}
+
+.menu-item button {
+    width: 100%;
+}
+
+#main {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+}
+
+@media screen and (max-width: 800px) {
+    #main {
+        width: 90%;
+    }
+}
+
+#paste-title {
+    width: 100%;
+    height: 24px;
+    margin: 12px 12px 8px 12px;
+}
+
+#paste-text {
+    width: 100%;
+    min-height: 400px;
+    resize: none;
+}
+
+.option {
+    display: flex;
+    width: 100%;
+    margin: 12px 0;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.option > label, .option > span {
+    width: 120px;
+    margin: 8px 0;
+}
+
+.option div {
+    max-width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+#paste-view-title {
+    text-align: left;
+    width: 100%;
+    font-size: 24px;
+}
+
+#paste-view-details {
+    width: 100%;
+    font-size: 16px;
+    color: var(--col-sub);
+    display: flex;
+}
+
+#paste-view-text {
+    background-color: var(--col-sub-alt);
+    padding: 8px 16px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+#paste-list, #folder-list {
+    background-color: var(--col-sub-alt);
+    padding: 8px;
+    margin: 8px;
+    border-radius: 8px;
+    width: 100%;
+    text-align: left;
+}
+
+#char-limit, #char-limit-encrypted {
+    color: var(--col-sub);
+    width: 100%;
+    text-align: right;
+    font-size: 12px;
+}
+
+#info {
+    width: 100%;
+    text-align: left;
+}
+
+#messages, #login-message {
+    color: red;
+    width: 100%;
+    text-align: left;
+}
+
+#ntf-list {
+    position: fixed;
+    right: 12px;
+    bottom: 0;
+    margin: 0;
+}
+
+.ntf {
+    color: white;
+    width: 350px;
+    border: 2px solid var(--ntf-col-border);
+    background-color: var(--ntf-col-bg);
+    padding: 12px;
+    border-radius: 12px;
+    margin: 12px 0;
+    transition: all 0.2s;
+}
+.ntf:hover {
+    cursor: pointer;
+}
+
+@media (width <= 500px) {
+    #ntf-list {
+        right: 0;
+        left: 0;
+    }
+    .ntf {
+        width: 90vw;
+    }
+}
+
+.ntf-info {
+    --ntf-col-border: rgba(0, 130, 251, .985);
+    --ntf-col-bg: rgba(0, 77, 148, .9);
+}
+.ntf-info:hover {
+    --ntf-col-bg: rgba(0, 77, 148, .5);
+}
+
+.ntf-error {
+    --ntf-col-border: rgba(241, 51, 34, .71);
+    --ntf-col-bg: rgba(138, 18, 12, .9);
+}
+.ntf-error:hover {
+    --ntf-col-bg: rgba(138, 18, 12, .5);
+}
+
+.ntf-success {
+    --ntf-col-border: rgba(100, 206, 100, .71);
+    --ntf-col-bg: rgba(0, 148, 0, .9);
+}
+.ntf-success:hover {
+    --ntf-col-bg: rgba(0, 148, 0, .5);
+}
+
+.ntf-info .ntf-title::before {
+    content: "🛈 Info";
+    color: #ffffffaa;
+}
+
+.ntf-error .ntf-title::before {
+    content: "❌ Error";
+    color: #ffffffaa;
+}
+
+.ntf-success .ntf-title::before {
+    content: "✅ Success";
+    color: #ffffffaa;
+}
+
+#pagination {
+    display: flex;
+}
+
+#pagination a, #cancel {
+    background-color: var(--col-sub-alt);
+    padding: 12px;
+    color: var(--col-text);
+    transition: all 0.2s;
+    border: none;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    margin: 0;
+    border-radius: 0;
+    text-decoration: none;
+}
+
+#pagination a:hover {
+    color: var(--col-sub-alt);
+    background-color: var(--col-text);
+}
+
+#pagination a.page-current {
+    background-color: var(--col-main);
+    color: var(--col-bg);
+    pointer-events: none;
+}
+
+#pagination a.page-disabled {
+    opacity: .33;
+    pointer-events: none;
+}
+
+#pagination a:first-child {
+    border-radius: 8px 0 0 8px;
+}
+
+#pagination a:last-child {
+    border-radius: 0 8px 8px 0;
+}
+
+.modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #00000070;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    border-radius: .5rem;
+    background-color: var(--col-bg);
+    width: 100%;
+    max-width: 500px;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#paste-view-text tr:nth-child(odd) td {
+    background-color: var(--col-sub-alt);
+}
+
+#paste-view-text table {
+    border-spacing: 0;
+}
